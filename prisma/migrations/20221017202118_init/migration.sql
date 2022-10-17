@@ -1,0 +1,12 @@
+-- CreateTable
+CREATE TABLE "Patient" (
+    "id" INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+    "name" TEXT NOT NULL,
+    "age" INTEGER NOT NULL
+);
+
+-- CreateTable
+CREATE TABLE "Doctor" (
+    "id" INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+    "name" TEXT NOT NULL
+);
