@@ -11,12 +11,15 @@ datasource db {
 }
 
 model Patient {
-  id   Int    @id @default(autoincrement())
-  name String
-  age  Int
+  id       Int     @id @default(autoincrement())
+  name     String
+  age      Int
+  doctor   Doctor? @relation(fields: [doctorId], references: [id])
+  doctorId Int?
 }
 
 model Doctor {
-  id   Int    @id @default(autoincrement())
-  name String
+  id      Int       @id @default(autoincrement())
+  name    String
+  Patient Patient[]
 }
